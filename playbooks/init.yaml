@@ -1,20 +1,40 @@
 ---
-- name: Init Playbook
+- name: Setup Main Host
   hosts: ansible_test
+<<<<<<< HEAD
   become: yes
   become_user: sudo
 
   tasks:
   - name: Install Packages
-    ansible.builtin.package:
-      name:
-        - htop
-        - wget
-        - curl
-      state: latest
+=======
+  remote_user: vile
 
+  tasks:
+  - name: Install Main Stuff
+    become: yes
+>>>>>>> 781283c4c7bef1373d52536b50f1ad7c9bb5bf1e
+    ansible.builtin.package:
+      name: 
+        - curl
+        - wget
+        - htop
+      state: latest
+<<<<<<< HEAD
+
+=======
+>>>>>>> 781283c4c7bef1373d52536b50f1ad7c9bb5bf1e
   - name: Install Docker
+    become: yes
     ansible.builtin.package:
       name:
         - docker.io
       state: latest
+<<<<<<< HEAD
+=======
+  - name: Install Ansible
+    become: yes
+    ansible.builtin.package:
+      name: ansible
+      state: latest
+>>>>>>> 781283c4c7bef1373d52536b50f1ad7c9bb5bf1e
