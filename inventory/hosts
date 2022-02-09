@@ -1,0 +1,5 @@
+[ansible_control]
+localhost
+
+[ansible_test]
+10.10.0.116

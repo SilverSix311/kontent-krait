@@ -1,0 +1,22 @@
+---
+- name: Init Playbook
+  hosts: ansible_test
+  become: yes
+  become_user: root
+
+  tasks:
+  - name: Install Pachages
+    ansible.builtin.package:
+      name:
+        - htop
+        - wget
+        - curl
+      state: latest
+    become_user: root
+
+  - name: Install Docker
+    ansible.builtin.package:
+      name:
+        - docker.io
+      state: latest
+    become_user: root
