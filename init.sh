@@ -1,6 +1,9 @@
 #!/bin/bash
 
-apt install curl git ansible -y
+apt install git ansible -y
 
-git clone git@github.com:SilverSix311/kontent-krait.git
+adduser krait
+
+git clone https://github.com/SilverSix311/kontent-krait.git
+chown -R krait:krait
 cd /opt/kontent-krait
