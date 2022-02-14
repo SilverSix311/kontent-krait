@@ -1,0 +1,14 @@
+---
+  - name: Kontent Krait Data Structure
+    hosts: localhost
+    become: yes
+    become_user: sudo
+
+    tasks:
+    - name: Setup mnt
+      become: yes
+      ansible.builtin.command:
+        - mkdir -p /mnt/{complete,incomplete}/{nzb,torrent}/{anime,movies,music,tv}
+        - mkdir -p /mnt/{gdrive,tcrypt,tdrive,unionfs,move}
+      args:
+        creates: /mnt/complete
