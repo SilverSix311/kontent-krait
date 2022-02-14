@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt install git ansible -y
+sudo apt install curl git ansible -y
 
 adduser krait
 #usermod -aG sudo krait
