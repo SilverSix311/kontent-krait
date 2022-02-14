@@ -24,5 +24,7 @@
   - name: Install Ansible
     become: yes
     ansible.builtin.package:
-      name: ansible
+      name:
+        - ansible
+        - ansible-galaxy
       state: latest
