@@ -8,7 +8,8 @@
     - name: Setup mnt
       become: yes
       ansible.builtin.command:
-        - mkdir -p /mnt/{complete,incomplete}/{nzb,torrent}/{anime,movies,music,tv}
+        - mkdir -p /mnt/{complete,incomplete}/{nzb,torrent}/{anime,movies,music,tv,.downloads}
         - mkdir -p /mnt/{gdrive,tcrypt,tdrive,unionfs,move}
+        - chown krait:krait -R complete incomplete gdrive tcrypt tdrive unionfs move
       args:
         creates: /mnt/complete
