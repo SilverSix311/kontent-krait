@@ -1,6 +1,6 @@
 ---
 - name: Setup Main Host
-  hosts: ansible_test
+  hosts: localhost
   become: yes
   become_user: sudo
 
@@ -26,5 +26,4 @@
     ansible.builtin.package:
       name:
         - ansible
-        - ansible-galaxy
       state: latest
