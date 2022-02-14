@@ -7,6 +7,6 @@
         command: ["sleep", "1d"]
 
 - name: Example play
-  hosts: example-play
+  hosts: localhost
   roles:
     - name: "docker-role"
